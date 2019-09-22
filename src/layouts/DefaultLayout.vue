@@ -32,7 +32,7 @@
 
           <q-btn round flat>
             <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
             <q-tooltip>Account</q-tooltip>
           </q-btn>
@@ -51,22 +51,33 @@
       <q-scroll-area class="fit">
         <q-list>
           <q-item-label header>{{ $t('title.productManage') }}</q-item-label>
-          <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
+          <q-item clickable tag="a" href="/">
             <q-item-section avatar>
               <q-icon name="watch" />
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ $t('title.productManage') }}</q-item-label>
-              <q-item-label caption>{{ $t('title.productManageDesc') }}</q-item-label>
+              <q-item-label caption>{{
+                $t('title.productManageDesc')
+              }}</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item clickable tag="a" target="_blank" href="https://github.quasar.dev">
+          <q-item
+            clickable
+            tag="a"
+            target="_blank"
+            href="https://github.quasar.dev"
+          >
             <q-item-section avatar>
               <q-icon name="notifications" />
             </q-item-section>
             <q-item-section>
-              <q-item-label>{{ $t('title.productNoticeImageManage') }}</q-item-label>
-              <q-item-label caption>{{ $t('title.productNoticeImageManageDesc') }}</q-item-label>
+              <q-item-label>{{
+                $t('title.productNoticeImageManage')
+              }}</q-item-label>
+              <q-item-label caption>{{
+                $t('title.productNoticeImageManageDesc')
+              }}</q-item-label>
             </q-item-section>
           </q-item>
 
@@ -74,7 +85,12 @@
 
           <q-item-label header>{{ $t('title.orderManage') }}</q-item-label>
 
-          <q-item clickable tag="a" target="_blank" href="https://chat.quasar.dev">
+          <q-item
+            clickable
+            tag="a"
+            target="_blank"
+            href="https://chat.quasar.dev"
+          >
             <q-item-section avatar>
               <q-icon name="shopping_cart" />
             </q-item-section>
@@ -82,7 +98,12 @@
               <q-item-label>Discord Chat Channel</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
+          <q-item
+            clickable
+            tag="a"
+            target="_blank"
+            href="https://forum.quasar.dev"
+          >
             <q-item-section avatar>
               <q-icon name="record_voice_over" />
             </q-item-section>
@@ -91,7 +112,12 @@
               <q-item-label caption>forum.quasar.dev</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item clickable tag="a" target="_blank" href="https://twitter.quasar.dev">
+          <q-item
+            clickable
+            tag="a"
+            target="_blank"
+            href="https://twitter.quasar.dev"
+          >
             <q-item-section avatar>
               <q-icon name="rss_feed" />
             </q-item-section>
@@ -100,7 +126,12 @@
               <q-item-label caption>@quasarframework</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item clickable tag="a" target="_blank" href="https://facebook.quasar.dev">
+          <q-item
+            clickable
+            tag="a"
+            target="_blank"
+            href="https://facebook.quasar.dev"
+          >
             <q-item-section avatar>
               <q-icon name="public" />
             </q-item-section>
@@ -143,5 +174,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

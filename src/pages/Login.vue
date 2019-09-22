@@ -6,13 +6,28 @@
         <!--
         <q-input v-model="credentials.email" placeholder="Your email address" @blur="$v.credentials.email.$touch" :error="$v.credentials.email.$error" class="full-width" ref="email" />
         -->
-        <q-input v-model="email" placeholder="이메일" @blur="checkEmail" class="full-width" ref="email" />
+        <q-input
+          v-model="email"
+          placeholder="이메일"
+          @blur="checkEmail"
+          class="full-width"
+          ref="email"
+        />
       </q-field>
       <q-field icon="vpn_key">
-        <q-input v-model="password" type="password" placeholder="패스워드" @blur="checkPassword" class="full-width" />
+        <q-input
+          v-model="password"
+          type="password"
+          placeholder="패스워드"
+          @blur="checkPassword"
+          class="full-width"
+        />
       </q-field>
 
       <div class="submit row q-mt-md">
+        <q-btn color="secondary" type="a" href="/#/product" class="q-mr-md">
+          Product
+        </q-btn>
         <q-btn color="primary" @click="submit()">Login</q-btn>
       </div>
     </div>
@@ -43,12 +58,8 @@ export default {
   //   }
   // },
   methods: {
-    checkEmail () {
-
-    },
-    checkPassword () {
-
-    },
+    checkEmail () {},
+    checkPassword () {},
     submit () {
       this.$v.credentials.$touch()
       if (this.$v.credentials.$error) {
@@ -62,5 +73,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>
