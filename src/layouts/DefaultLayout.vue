@@ -51,7 +51,7 @@
       <q-scroll-area class="fit">
         <q-list>
           <q-item-label header>{{ $t('title.productManage') }}</q-item-label>
-          <q-item clickable tag="a" href="/">
+          <q-item clickable tag="a" href="/#/product">
             <q-item-section avatar>
               <q-icon name="watch" />
             </q-item-section>
@@ -62,12 +62,7 @@
               }}</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item
-            clickable
-            tag="a"
-            target="_blank"
-            href="https://github.quasar.dev"
-          >
+          <q-item clickable tag="a" href="/#/product/test">
             <q-item-section avatar>
               <q-icon name="notifications" />
             </q-item-section>

@@ -95,7 +95,7 @@ export default {
   mounted: function () {
     // console.log(this.$q.platform.is)
     // console.log(this.$q.lang)
-    console.log(this.$q.iconSet)
+    // console.log(this.$q.iconSet)
   },
   watch: {
     lang (lang) {

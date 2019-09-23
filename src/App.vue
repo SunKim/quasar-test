@@ -1,52 +1,26 @@
 <template>
   <div id="q-app">
-    <transition :name="transitionName">
-      <keep-alive>
-        <router-view />
-      </keep-alive>
+    <transition name="page" mode="out-in">
+      <router-view />
     </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  data () {
-    return {
-      transitionName: ''
-    }
-  },
-  beforeRouteUpdate (to, from, next) {
-    const toDepth = to.path.split('/').length
-    const fromDepth = from.path.split('/').length
-    this.transitionName = toDepth < fromDepth ? 'overlap-left' : 'overlap-right'
-    next()
-  }
+  name: 'App'
 }
 </script>
 
-<style>
-.child-slide {
-  width: 100%;
-  position: absolute;
-  transition: all 0.3s;
+<style scoped>
+/* transition 관련 */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s, transform 0.2s;
 }
-.overlap-left-enter,
-.overlap-left-enter-active {
+.page-enter,
+.page-leave-to {
   opacity: 0;
-}
-.overlap-left-enter-to {
-  opacity: 1;
-}
-.overlap-left-leave-active {
-  transform: translate(100%, 0);
-}
-.overlap-right-leave-active {
-  z-index: -1;
-  opacity: 1;
-  transform: translate(-30px, 0);
-}
-.overlap-right-enter {
-  transform: translate(100%, 0);
+  transform: translateX(-50%);
 }
 </style>
