@@ -1,8 +1,6 @@
 <template>
   <div id="q-app">
-    <transition name="page" mode="out-in">
-      <router-view />
-    </transition>
+    <router-view />
   </div>
 </template>
 
@@ -12,15 +10,4 @@ export default {
 }
 </script>
 
-<style scoped>
-/* transition 관련 */
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.2s, transform 0.2s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-  transform: translateX(-50%);
-}
-</style>
+<style scoped></style>

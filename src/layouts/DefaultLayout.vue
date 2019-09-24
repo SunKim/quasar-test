@@ -140,7 +140,35 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <!-- Vue의 transition 사용(css정의 필요) -->
+      <!-- <transition name="page" mode="out-in">
+        <keep-alive>
+          <router-view />
+        </keep-alive>
+      </transition> -->
+
+      <!-- Quasar transition 사용. 2개가 동시에 transtion되므로 mode="out-in" 써줘야함 -->
+      <transition
+        appear
+        enter-active-class="animated fadeIn"
+        leave-active-class="animated fadeOut"
+        mode="out-in"
+      >
+        <keep-alive>
+          <router-view />
+        </keep-alive>
+      </transition>
+
+      <!-- <transition
+        appear
+        enter-active-class="animated fadeInDown"
+        leave-active-class="animated fadeOutDown"
+        mode="out-in"
+      >
+        <keep-alive>
+          <router-view />
+        </keep-alive>
+      </transition> -->
     </q-page-container>
 
     <q-footer bordered class="bg-blue-grey-10 text-white">
@@ -169,4 +197,25 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+/* transition 관련 */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.1s, transform 0.1s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+/*
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.15s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+*/
+</style>
